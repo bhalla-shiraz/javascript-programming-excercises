@@ -57,3 +57,6 @@ const Students = new function() {
 
 console.log(Students);
 console.log(Students.age);
+
+// new function(){...} does two things at the same time: define a
+// function (an anonymous constructor function) and invoke it with new
