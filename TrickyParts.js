@@ -108,3 +108,15 @@ Date.prototype.nextDay = function(){
 var date = new Date();
 console.log(date)
 console.log(date.nextDay())
+
+
+
+
+console.log(typeof null);
+console.log(typeof {});
+console.log(typeof []);
+console.log(typeof undefined);
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() { console.log(i); }, 1000 + i);
+}
