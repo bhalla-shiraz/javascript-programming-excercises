@@ -1,8 +1,8 @@
 const countingZeros = (num) => {
    let count = 0
-   while(num > 0) {
-      count += Math.floor(num/10)
-      num /= 10
+   while(num >= 10) {
+      count += 1
+      num = Math.floor(num/10)
    }
    return count
 }
