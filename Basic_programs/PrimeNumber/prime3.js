@@ -1,14 +1,15 @@
 const isPrime = (num) => {
+   if(num === 1) return false
    if(num % 2 === 0 && num !== 2) {
-      return false
+    return false
    }
    let divisor = 3
    while(divisor < num/2) {
-      if(num % divisor === 0) {
-         return false
-      } else {
-         divisor += 2
-      }
+    if(num % divisor === 0) {
+        return false
+    } else {
+        divisor += 2
+    }
    }
    return true
 }
