@@ -14,6 +14,7 @@ var isValid = function(s) {
          let top = stack.pop()
          if(map[top] !== item) {
             valid = false
+            break
          }
       }
     }
