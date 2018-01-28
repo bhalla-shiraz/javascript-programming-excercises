@@ -91,3 +91,51 @@ emitter.emit('event_name', 'foo', 'bar')
 
 
 // 
+
+
+
+/**
+ * Way 2 - but why
+ * We want a common list 
+ * there are two ways to handle this - way 1 add that in prototype
+ * way 2 - this one, uses private variable
+ */
+
+ console.log("WAY 2 ---------");
+ 
+function EmitterWay2() {
+      var list = []
+      this.name = ''
+      this.callback = () => ({})
+      this.subscribe = (name, callback) => {
+        this.name = name
+        this.callback = callback
+        list.push({
+                   name,
+                   callback
+               })
+         return this
+      }
+      this.emit = (name, foo, bar) => {
+            list.forEach((sub) => {
+            sub.callback(foo, bar)
+         })
+      }
+      this.release = () => {
+            list = list.filter((item) => item.name !== this.name)
+      }
+   }
+
+   const emitter2 = new EmitterWay2()
+
+const sub1_way2 = emitter2.subscribe('event_name', (foo, bar) => {
+                console.log('sub1', foo, bar)
+})
+const sub2_way2 = emitter2.subscribe('other_name', (foo, bar) => {
+                console.log('sub2', foo, bar)
+})
+emitter2.emit('event_name', 'foo', 'bar')
+sub1_way2.release()
+// console.log(EmitterWay2.list);
+
+emitter2.emit('event_name', 'foo', 'bar')
