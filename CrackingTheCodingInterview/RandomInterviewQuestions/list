@@ -1,0 +1,59 @@
+Q1 Your are given 2 files. One with a list of keywords and the other with text. 
+Count the occurrences of the keywords in the other text file. The other text file is 
+extremely large.
+
+Q2 Implement Binary Search Algorithm  
+done
+
+Q3 Write a function to remove a node from a linked list.  
+done
+
+Q4 Can you create a program that detects an anagram.  
+done
+
+Q5 Quick Sort
+
+Q6 What is TCP, UDP?
+
+Q7 Find common in string
+done
+
+Q8 Implement Subtraction  
+
+Q9 How to check whether two strings are similar - hamming distance
+
+Q10 count number of occurrences in a sorted array  
+
+Q11 Write a class of Shape with sub classes of Triangle, Square, and Rectangle. Write functions for these shapes such as set color, get color, get sides, set sides.  
+
+Q12 What is polymorphism? What is the advantage of implementing polymorphism on the user side?
+
+Q13 DFS BFS using recursion
+done
+
+Q14 Linked List question to remove duplicate elements 
+
+
+Q15 Find the Max of two numbers without using if-else or ternary operators. 
+
+Q16 What is an abstract class?  
+
+Q17 Given an array of strings, create a function that returns the number of matching prefixes  
+
+Q18 How to output inorder of a BST?  
+done
+
+Q19 sort it such that all zeros should go to the right side of the array and non-zeros numbers shouldn't change the order
+ex: 2, 0, 3, 1,0,4 ==> 2,3,1,4,0,0
+Conditions: shouldn't use extra space (temp variables ok), should do in 0(n) time  
+
+Q20 reverse linkedlist. 
+
+Q21 Given a number z, find a pair of (x,y) in the array which sum up to z.
+done
+
+Q22 how to find the middle element of a linked list in one pass?
+done
+
+Q23 Hashmap two sum problem
+done
