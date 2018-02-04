@@ -1,0 +1,14 @@
+Canvas:
+1. Resolution dependent
+2. event handlers not supported
+3. poor text rendering capabilities
+4. save resulting image - png jpg
+5. well suited for graphic intensive games
+
+
+SVG:
+1. Resolution independent
+2. Support event handlers 
+3. best suited for apps with large rendering areas
+4. slow rendering if complex
+5. not for games

@@ -1,0 +1,56 @@
+
+It is unwise to unnecessarily create functions within other 
+functions if closures are not needed for a particular task, 
+as it will negatively affect script performance both in terms 
+of processing speed and memory consumption.
+
+
+For instance, when creating a new object/class, methods should 
+normally be associated to the object's prototype rather than 
+defined into the object constructor. The reason is that whenever 
+the constructor is called, the methods would get reassigned (that 
+is, for every object creation).
+
+Example 1
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+  this.getName = function() {
+    return this.name;
+  };
+
+  this.getMessage = function() {
+    return this.message;
+  };
+}
+
+The above code will be inefficent as we're going to make copies of 
+common functions which are unnecessary.
+
+Better way 1:
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+MyObject.prototype = {
+  getName: function() {
+    return this.name;
+  },
+  getMessage: function() {
+    return this.message;
+  }
+};
+
+but in above code as well we are overwriting the prototypes
+
+best way:
+function MyObject(name, message) {
+  this.name = name.toString();
+  this.message = message.toString();
+}
+MyObject.prototype.getName = function() {
+  return this.name;
+};
+MyObject.prototype.getMessage = function() {
+  return this.message;
+};

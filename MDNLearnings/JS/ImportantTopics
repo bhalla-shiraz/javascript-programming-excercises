@@ -1,0 +1,57 @@
+Topics
+HTML
+CSS
+JS
+React
+Basic algos
+Canvas
+SVG
+
+
+HTML - 30min
+CSS - 1 Hr
+JS - 3 Hrs
+React/Redux - 1 Hr
+Basic algos - 3 Hrs
+Canvas - 2 Hrs
+SVG - 2 hrs
+
+
+HTML -
+basic syntax 
+
+CSS - 
+Flex
+
+JS - 
+closures
+inheritance
+prototype
+constructors
+singleton
+Hoisting
+call apply
+
+React/Redux -
+component life cycle
+why better
+virtual dom
+
+Basic algos - 
+stack
+queue
+linked list
+sorting
+tree
+traversals
+
+
+
+1. call vs apply
+2. custom objeccts using classes
+3. setting prototypes
+4. override prototype methods
+5. inner functions
+6. closures
+7 hoisting
+8 are function calls hoisted

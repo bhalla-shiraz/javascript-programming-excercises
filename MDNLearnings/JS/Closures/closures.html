@@ -1,0 +1,53 @@
+<!-- <html>
+    <head>
+        <title>
+            Closure Test
+        </title>
+    </head>
+    <body>
+        <div id='btnHolder'></div>
+    <script>
+        function putButtonsForTest() {
+            const holder = document.getElementById('btnHolder')
+            for(var i = 0; i < 6; i++) {
+                button = document.createElement('button')
+                button.innerHTML = 'button ' + i
+                button.addEventListener('click', function(e) {
+                    console.log(i);
+                    
+                }, false)
+                holder.appendChild(button)
+            }
+        }
+        putButtonsForTest()
+    </script>
+    </body>
+</html> -->
+
+<html>
+    <head>
+        <title>
+            Closure Test
+        </title>
+    </head>
+    <body>
+        <div id='btnHolder'></div>
+    <script>
+        function putButtonsForTest() {
+            const holder = document.getElementById('btnHolder')
+            for(var i = 0; i < 6; i++) {
+                button = document.createElement('button')
+                button.innerHTML = 'button ' + i;
+                (function(i) {
+                    button.addEventListener('click', function(e) {
+                    console.log(i);
+                }, false)
+                })(i)
+                
+                holder.appendChild(button)
+            }
+        }
+        putButtonsForTest()
+    </script>
+    </body>
+</html>
