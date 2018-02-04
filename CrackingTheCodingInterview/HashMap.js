@@ -25,11 +25,16 @@ class HashMap {
             this.map[hashIndex] = new Node(key, value, hashIndex)
             return
         } 
-        while(bucketItem.next !== null) {
+        while(bucketItem.next !== null && bucketItem.next.key !== key) {
             bucketItem = bucketItem.next
         }
 
-        bucketItem.next = new Node(key, value, hashIndex)
+        if(bucketItem.next === null) {
+            bucketItem.next = new Node(key, value, hashIndex)
+            return
+        }
+        
+        bucketItem.next.value = value
         
     }
     get(key) {
@@ -60,6 +65,9 @@ const map = new HashMap()
 map.put('sachin', 30)
 map.put('vishal', 20)
 map.put('v', 50)
+map.put('v', 670)
+map.put('v', 0)
+map.put('v', 1)
 
 // map.show()
 
