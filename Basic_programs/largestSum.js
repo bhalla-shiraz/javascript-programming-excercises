@@ -7,6 +7,8 @@ const largestSum = (arr) => {
       if(biggest < arr[i]) {
          secondBiggest = biggest
          biggest = arr[i]
+      } else if (secondBiggest < arr[i]) {
+          secondBiggest = arr[i]
       }
       i++
    }
@@ -14,4 +16,4 @@ const largestSum = (arr) => {
    return biggest + secondBiggest
 }
 
-console.log(largestSum([-1,2,4,5,6,10]));
+console.log(largestSum([-1,2,4,5,6,6]));

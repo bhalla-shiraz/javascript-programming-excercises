@@ -40,9 +40,13 @@ console.log(Array.prototype.slice.call( my_object ));
 
 ///////////////
 
-const add = (item1, item2) => {
+const add = (item1, item2, item3) => {
+  console.log(item1, item2, item3);
+  // console.log(Array.prototype.slice.call(arguments));
+  
+  
    console.log(item1 + item2);
 }
 
-add.call(this, 1,2)
+add.call(null, 1,2)
 add.apply(this, [1,2, 3])
